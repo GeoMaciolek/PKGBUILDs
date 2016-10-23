@@ -1,0 +1,30 @@
+# Contributor: Jonas Heinrich <onny@project-insanity.org>
+# Former Maintainer: sundar_ima <feedback.multibootusb@gmail.com>
+# Contributor: Angel_Caido <geussepe at gmail dot com>
+# Maintainer: Geoff Maciolek <geoffmaciolek at gmail dot com>
+
+pkgname=multibootusb-git
+pkgver=7.5.0.r31.g7c40d33
+pkgrel=1
+pkgdesc="Boot multiple live Linux distros from a usb flash drive. (Latest GIT ver)"
+arch=("any")
+url="http://multibootusb.org"
+license=("GPL")
+depends=("python2-pyqt4" "mtools" "util-linux" "parted" "python2")
+makedepends=("git")
+conflicts=("multibootusb")
+provides=("multibootusb")
+sha512sums=("SKIP")
+source=("$pkgname::git+https://github.com/mbusb/multibootusb.git")
+
+pkgver() {
+  cd $pkgname
+  git describe --long --tags | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
+}
+
+package () {
+  cd "$srcdir/$pkgname"
+#  sed -i 's/sys.prefix, "multibootusb",/sys.prefix, "share", "'$pkgname'",/g' setup.py
+  python2.7 setup.py install --root="$pkgdir/" --optimize=1 #--install-lib="/usr/lib/$pkgname"
+}
+

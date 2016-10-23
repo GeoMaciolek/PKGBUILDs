@@ -3,6 +3,14 @@ Various `PKGBUILD` filess for Arch Linux's AUR (Arch User Repository).  They wil
 
 ## Projects
 
+### multibootusb-git (New)
+
+[multibootusb](http://multibootusb.org) is a tool to write multiple "LiveCD" images to the same USB key.  The [multiboot](https://aur.archlinux.org/packages/multiboot) `PKGBUILD` contains the most recent stable release (as of this writing), and this PKGBUILD will let people add a more current version
+
+#### Changelog
+
+* 2016-10-22 - Created a `PKGBUILD` using the existing `multibootusb` AUR entry's `PKGBUILD`, updated to use GIT and to "build" it.
+
 ### f3-git (Fix)
 
 [F3](https://github.com/AltraMayor/f3) is a tool to detect counterfeit flash media.  The [f3-git](https://aur.archlinux.org/packages/f3-git) `PKGBUILD` contains a recent version of this. This `PKGBUILD` fixes some issues with the version on AUR (as of 2016-10-20).
