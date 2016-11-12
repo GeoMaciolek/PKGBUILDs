@@ -3,6 +3,10 @@ Various `PKGBUILD` filess for Arch Linux's AUR (Arch User Repository).  They wil
 
 ## Projects
 
+### multibootusb (8.0.0)
+
+[multibootusb](http://multibootusb.org) is a tool to write multiple "LiveCD" images to the same USB key.  The [multiboot](https://aur.archlinux.org/packages/multiboot) `PKGBUILD` contains 7.5.0 (as of this writing); this PKGBUILD is 8.0.0
+
 ### multibootusb-git (New)
 
 [multibootusb](http://multibootusb.org) is a tool to write multiple "LiveCD" images to the same USB key.  The [multiboot](https://aur.archlinux.org/packages/multiboot) `PKGBUILD` contains the most recent stable release (as of this writing), and this PKGBUILD will let people add a more current version
@@ -18,3 +22,8 @@ Various `PKGBUILD` filess for Arch Linux's AUR (Arch User Repository).  They wil
 #### Changelog
 
 * 2016-10-20 - Updated `PKGBUILD` to get `make` to install the `extra` target via `install-extra`. (It's already built by the `PKGBUILD`). Also, f3 GIT version bump
+
+## Main Changelog
+
+* 2016-10-22 - Added `multibootusb-git` (new)
+* 2016-10-20 - Added `f3-git` (fixes)
